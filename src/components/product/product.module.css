@@ -1,0 +1,15 @@
+.products {
+  margin: 2rem auto;
+  max-width: 60rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.products ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
