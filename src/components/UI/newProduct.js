@@ -22,16 +22,13 @@ const NewProduct = (props) => {
     };
 
     const addProductData = async (data) => {
-      await fetch(
-        "https://buyproducts-92b3d-default-rtdb.firebaseio.com/products.json",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      await fetch(process.env.REACT_APP_DB_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
     };
 
     addProductData(data);

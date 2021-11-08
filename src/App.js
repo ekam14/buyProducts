@@ -15,9 +15,7 @@ function App() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch(
-        "https://buyproducts-92b3d-default-rtdb.firebaseio.com/products.json"
-      );
+      const response = await fetch(process.env.REACT_APP_DB_URL);
       const data = await response.json();
 
       const prodData = [];
